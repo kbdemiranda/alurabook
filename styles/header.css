@@ -52,8 +52,69 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .container__botao {
     display: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+/* Quando começamos pelo moble first, deixamos todos os estilos primeiro e ai conforme fomos crescendo
+    vamos adicionando o min-width para cada tamanho (tablet, web, tv, etc) 
+    Quando começamos com o desktop first, usamos o max-width e vamos diminuindo. */
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonte-segundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem-transparente, 
+    .cabeçalho__menu-hamburguer{
+        display: none;
+    }
+
+    /* Faz aparecer o menu quando clicado */
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    /* Remove o check do checkbox */
+    .opcoes__botao{
+        display: none;
+    }
+
 }
