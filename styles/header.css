@@ -67,6 +67,10 @@
     display: none;
 }
 
+.container__texto{
+    display: none;
+}
+
 /* Quando começamos pelo moble first, deixamos todos os estilos primeiro e ai conforme fomos crescendo
     vamos adicionando o min-width para cada tamanho (tablet, web, tv, etc) 
     Quando começamos com o desktop first, usamos o max-width e vamos diminuindo. */
@@ -117,4 +121,25 @@
         display: none;
     }
 
+}
+
+@media screen and (min-width: 1728px){
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .container__texto{
+        display: block;
+    }
 }
